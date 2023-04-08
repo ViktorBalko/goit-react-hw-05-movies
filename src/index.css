@@ -1,15 +1,130 @@
 @import-normalize; /* bring in normalize.css styles */
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+ margin: 0;
+ color: #2d2d2dbf;
+ background-color: #000000;
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
 }
+@import url('https://fonts.cdnfonts.com/css/montrealserial');
+@import url('https://fonts.cdnfonts.com/css/the-laker');
+@import url('https://fonts.cdnfonts.com/css/gremlin');
+@import url('https://fonts.cdnfonts.com/css/tt-wellingtons-trl');
+@import url('https://fonts.cdnfonts.com/css/srinova');
+@import url('https://fonts.cdnfonts.com/css/indie-flower?styles=20399');
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+a {
+ color: green;
+ text-decoration: none;
+}
+/* 
+.Container {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  padding: 0 45px;
+  background-color: #000e2788;
+}  */
+
+.App {
+ font-family: 'Gremlin', sans-serif;
+ font-size: 10px;
+ font-weight: 100;
+ display: flex;
+ flex-direction: column;
+ color: #004bd7;
+ color: #3723ee;
+ color: #7500009f;
+}
+
+.NavigationBar {
+ display: grid;
+ font-size: 15px;
+ font-weight: 100;
+ margin: 10px;
+ padding: 0;
+}
+
+.Navigation {
+ display: grid;
+}
+.NavigationItem,
+.NavigationItem2 {
+ display: flex;
+ cursor: pointer;
+ width: 250px;
+ height: 50px;
+ margin: 5px;
+ overflow: hidden;
+ border-radius: 1px;
+ transition: 0.2s;
+ transform: skew(-29deg, 0);
+ background: linear-gradient(#001253, #000c18);
+}
+
+.NavigationItem {
+ border-left: 2px solid #001530;
+ border-bottom: 1px solid #011d42;
+}
+.NavigationItem2 {
+ border-left: 2px solid #001530;
+ border-top: 1px solid #011d42;
+ transform: skew(29deg, 0);
+}
+
+.NavigationItem:hover {
+ transition: 0.2s;
+ border-bottom: 1px solid #006cfa87;
+ border-left: 4px solid #006cfa87;
+}
+.NavigationItem2:hover {
+ border-top: 1px solid #006cfa87;
+ border-left: 4px solid #006cfa87;
+}
+
+.Button,
+.Button2 {
+ display: block;
+ width: 250px;
+ height: 50px;
+ background-color: #001b4e;
+ border: none;
+ transition: 0.4s;
+ transition: all ease-out 350ms;
+ background: linear-gradient(#00091b, #010d27, #010e28);
+}
+.Button:hover,
+.Button2:hover {
+ transition: 0.4s;
+ border-radius: 1px;
+ background: linear-gradient(#010f2d, #010d27, #010e28);
+}
+
+.Button span,
+.Button2 span {
+ display: flex;
+ font-family: 'Indie Flower', sans-serif;
+ font-family: 'The Laker', sans-serif;
+ font-weight: 900;
+ font-size: 25px;
+ justify-content: center;
+ align-items: center;
+ width: 250px;
+ height: 50px;
+ padding-bottom: 4px;
+ border-radius: 7px;
+ transition: 1s;
+ color: #4b628a9c;
+}
+.Button:hover span,
+.Button2:hover span {
+ transition: 1s;
+ color: #e8ecf2b1;
 }
