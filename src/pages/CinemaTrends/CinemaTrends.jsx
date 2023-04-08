@@ -17,7 +17,7 @@ export const CinemaTrends = () => {
 
  return (
   <div className={styles.CinemaTrendsBox}>
-   <h1 className={styles.CinemaTrendsTitle}>Cinema Trends</h1>
+   {/* <h1 className={styles.CinemaTrendsTitle}>Cinema Trends</h1> */}
    {/* <CinemaDetails /> */}
    <CinemaCatalog data={trends} />
   </div>
