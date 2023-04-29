@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchDetails } from 'services/cinemaApi';
+import styles from 'pages/CinemaDetails/CinemaDetails.module.css';
 
 export function CinemaDetails() {
  const { id } = useParams();
@@ -11,6 +12,7 @@ export function CinemaDetails() {
   const getDetails = async () => {
    const response = await fetchDetails(id);
    setDetails(response);
+   // console.log(details);
   };
   getDetails();
  }, [id]);
@@ -20,12 +22,39 @@ export function CinemaDetails() {
  }
 
  return (
-  <div>
-   <h2>{details.title}</h2>
-   <p>{details.overview}</p>
-   <p>Release date: {details.release_date}</p>
-   <p>Vote average: {details.vote_average}</p>
-   <p>Vote count: {details.vote_count}</p>
+  <div className={styles.CinemaDetailsBox}>
+   <img
+    className={styles.CinemaDetailsImage}
+    src={`https://image.tmdb.org/t/p/w500/${details.poster_path}`}
+    alt={details.title}
+   />
+   <div className={styles.CinemaDetails}>
+    <ul className={styles.CinemaDetailsList}>
+     <li className={styles.CinemaDetailsItem}>
+      <h2 className={styles.CinemaDetailsTitle}>{details.title}</h2>
+     </li>
+     <li className={styles.CinemaDetailsItem}>
+      <p className={styles.CinemaDetailsParagraph}>
+       Overwiev: {details.overview}
+      </p>
+     </li>
+    </ul>
+
+    <ul className={styles.CinemaDetailsList}>
+     <li className={styles.CinemaDetailsItem}>
+      <p className={styles.CinemaDetailsRelease}>
+       Release date: {details.release_date}
+      </p>
+     </li>
+     <li>
+      <button>Cast</button>
+     </li>
+
+     <li>
+      <button>Reviews</button>
+     </li>
+    </ul>
+   </div>
   </div>
  );
 }

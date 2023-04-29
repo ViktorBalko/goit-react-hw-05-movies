@@ -2,13 +2,26 @@
 
 body {
  margin: 0;
- color: #2d2d2dbf;
- background-color: #000000;
+ color: #0339696a;
+ background-color: #002147;
+ background-image: url(./images/cinema.jpg);
+ /* background-image: url(./images/0099.jpeg); */
+ background-image: url(./images/fon.jpg);
+ background-size: cover;
+ background-position: center;
+ background-attachment: fixed;
  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
  -webkit-font-smoothing: antialiased;
  -moz-osx-font-smoothing: grayscale;
 }
+@import url('https://fonts.cdnfonts.com/css/bringme');
+@import url('https://fonts.cdnfonts.com/css/hubballi');
+@import url('https://fonts.cdnfonts.com/css/langar');
+@import url('https://fonts.cdnfonts.com/css/breathe-fire-iv-95305');
+@import url('https://fonts.cdnfonts.com/css/mirey-personal-use-96173');
+@import url('https://fonts.cdnfonts.com/css/hicks-bryant');
+@import url('https://fonts.cdnfonts.com/css/banirmet-dua');
 @import url('https://fonts.cdnfonts.com/css/montrealserial');
 @import url('https://fonts.cdnfonts.com/css/the-laker');
 @import url('https://fonts.cdnfonts.com/css/gremlin');
@@ -21,17 +34,26 @@ code {
 }
 
 a {
- color: green;
+ /* font-style: italic; */
+ font-family: 'Bringme', sans-serif;
+ font-size: 20px;
+ font-weight: 100;
+ color: #007bb8bc;
  text-decoration: none;
+ transition: 0.3s;
 }
-/* 
-.Container {
-  display: block;
-  width: 100%;
-  height: 100vh;
-  padding: 0 45px;
-  background-color: #000e2788;
-}  */
+
+ul {
+ list-style-type: none;
+}
+
+container {
+ display: grid;
+ justify-content: center;
+ width: 100%;
+ height: 100vh;
+ padding: 120px 0px;
+}
 
 .App {
  font-family: 'Gremlin', sans-serif;
@@ -39,92 +61,55 @@ a {
  font-weight: 100;
  display: flex;
  flex-direction: column;
- color: #004bd7;
- color: #3723ee;
- color: #7500009f;
 }
 
-.NavigationBar {
- display: grid;
- font-size: 15px;
- font-weight: 100;
- margin: 10px;
+.Navigations {
+ position: fixed;
+ display: flex;
+ justify-content: space-evenly;
+ align-items: center;
+ height: 100px;
+ width: 100vw;
+ margin: 0;
  padding: 0;
+ z-index: 99;
+ box-shadow: 0 0 28px 27px #00050b;
+ background: #010911f6;
+ backdrop-filter: blur(8px);
+ -webkit-backdrop-filter: blur(8px);
+ border-bottom: 1px solid #a89c9c20;
 }
 
-.Navigation {
- display: grid;
-}
-.NavigationItem,
-.NavigationItem2 {
+.NavigationsItem {
  display: flex;
- cursor: pointer;
- width: 250px;
- height: 50px;
- margin: 5px;
- overflow: hidden;
- border-radius: 1px;
- transition: 0.2s;
- transform: skew(-29deg, 0);
- background: linear-gradient(#001253, #000c18);
-}
-
-.NavigationItem {
- border-left: 2px solid #001530;
- border-bottom: 1px solid #011d42;
-}
-.NavigationItem2 {
- border-left: 2px solid #001530;
- border-top: 1px solid #011d42;
- transform: skew(29deg, 0);
-}
-
-.NavigationItem:hover {
- transition: 0.2s;
- border-bottom: 1px solid #006cfa87;
- border-left: 4px solid #006cfa87;
-}
-.NavigationItem2:hover {
- border-top: 1px solid #006cfa87;
- border-left: 4px solid #006cfa87;
-}
-
-.Button,
-.Button2 {
- display: block;
- width: 250px;
- height: 50px;
- background-color: #001b4e;
- border: none;
- transition: 0.4s;
- transition: all ease-out 350ms;
- background: linear-gradient(#00091b, #010d27, #010e28);
-}
-.Button:hover,
-.Button2:hover {
- transition: 0.4s;
- border-radius: 1px;
- background: linear-gradient(#010f2d, #010d27, #010e28);
-}
-
-.Button span,
-.Button2 span {
- display: flex;
- font-family: 'Indie Flower', sans-serif;
- font-family: 'The Laker', sans-serif;
- font-weight: 900;
- font-size: 25px;
  justify-content: center;
  align-items: center;
+ cursor: pointer;
  width: 250px;
- height: 50px;
- padding-bottom: 4px;
- border-radius: 7px;
- transition: 1s;
- color: #4b628a9c;
+ height: 70px;
+ overflow: hidden;
+ border-radius: 8px;
+ font-family: 'Banirmet Dua', sans-serif;
+ font-family: 'Hicks Bryant', sans-serif;
+ font-family: 'Mirey Personal Use', sans-serif;
+ font-family: 'Breathe Fire IV', sans-serif;
+ font-family: 'Langar', sans-serif;
+ font-family: 'Hubballi', sans-serif;
+ font-weight: 900;
+ font-size: 25px;
+
+ /* color: #fcf1f1e5; */
 }
-.Button:hover span,
-.Button2:hover span {
- transition: 1s;
- color: #e8ecf2b1;
+
+.NavigationsItem:nth-child(1) {
+ /* border-right: 1px solid #004671; */
+ border-left: 1px solid transparent;
+}
+/* .NavigationsItem {
+ border-left: 1px solid #004671;
+ background-color: #70717215;
+} */
+.NavigationsItem:hover a {
+ color: #003e78be;
+ transition: 0.3s;
 }

@@ -1,11 +1,15 @@
 .CinemaCatalog {
- display: flex;
- padding: 25px;
- background-color: #000000;
- justify-content: center;
- align-content: center;
- align-items: center;
- /* flex-direction: column; */
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ /* grid-template-rows: repeat(4, 1fr); */
+ /* padding-bottom: 50px; */
+ /* grid-row-gap: 30px; */
+ /* grid-auto-rows: 350px; */
+}
 
- flex-wrap: wrap;
+.CinemaCard {
+ display: grid;
+ justify-self: center;
+ width: 250px;
+ margin: 25px;
 }
